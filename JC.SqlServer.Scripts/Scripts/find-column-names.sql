@@ -4,7 +4,7 @@ DECLARE @ColumnName AS VARCHAR(MAX)
 SET @ColumnName = '%COLUMN_TO_FIND%'
 
 SELECT sys.schemas.name        AS [Schema],
-       sys.tables.name		   AS [Table],
+       sys.tables.name	       AS [Table],
        sys.columns.name        AS [Column],
        sys.types.name          AS [Data Type],
        sys.columns.max_length  AS [Length],
