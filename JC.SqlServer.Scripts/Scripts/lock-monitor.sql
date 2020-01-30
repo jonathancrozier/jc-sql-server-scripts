@@ -1,4 +1,4 @@
-﻿-- Output any blocked/blocking processes.
+-- Output any blocked/blocking processes.
 
 SET NOCOUNT ON
 GO
@@ -11,7 +11,7 @@ GO
 
 CREATE TABLE #BlockedProcesses
 (
-	BlockedSPID   INT,
+    BlockedSPID   INT,
     BlockedStatus CHAR(10)
 )
 GO
@@ -38,7 +38,7 @@ WHILE(@@ROWCOUNT > 0)
         PRINT '----------------------------------'
         PRINT ''
         DBCC INPUTBUFFER(@LogBlockedSPID)
-		PRINT ''
+        PRINT ''
  
         SELECT TOP 1 @LogBlockedSPID = BlockedSPID, @LogBlockedStatus = BlockedStatus
         FROM     #BlockedProcesses
