@@ -62,5 +62,6 @@
   <ItemGroup>
     <None Include="Scripts\find-column-names.sql" />
     <None Include="Scripts\lock-monitor.sql" />
+    <None Include="Scripts\parse-name-parts-from-full-name.sql" />
   </ItemGroup>
 </Project>
