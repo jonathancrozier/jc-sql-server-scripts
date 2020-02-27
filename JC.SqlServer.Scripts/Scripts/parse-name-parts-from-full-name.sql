@@ -32,16 +32,16 @@ BEGIN 
     DECLARE @FirstWordEndIndex   INT;
     DECLARE @SecondWordEndIndex  INT;
     DECLARE @ThirdWordEndIndex   INT;
-    DECLARE @FirstWord			 NVARCHAR(8);
-    DECLARE @SecondWord		     NVARCHAR(50);
-    DECLARE @ThirdWord		     NVARCHAR(50);
+    DECLARE @FirstWord			        NVARCHAR(8);
+    DECLARE @SecondWord		        NVARCHAR(50);
+    DECLARE @ThirdWord		         NVARCHAR(50);
  
     -- Get the last index.
     SET @AccountNameEndIndex = LEN(@CustomerAccountName) - 1;
     
     -- Get the first word.
     SET @FirstWordEndIndex = (SELECT CHARINDEX(' ', @CustomerAccountName, 0));
-    SET @FirstWord		   = SUBSTRING(@CustomerAccountName, 0, @FirstWordEndIndex);
+    SET @FirstWord		       = SUBSTRING(@CustomerAccountName, 0, @FirstWordEndIndex);
     
     -- Get the second word.
     SET @SecondWordEndIndex = (SELECT CHARINDEX(' ', @CustomerAccountName, @FirstWordEndIndex + 1));
@@ -67,19 +67,19 @@ BEGIN 
     
     -- Check if the first word is a 'Title'.
     SELECT @Title = CASE LTRIM(RTRIM(@FirstWord)) WHEN 'Dr'	   THEN 'Dr'
-    											  WHEN 'Dr.'   THEN 'Dr.'
-    											  WHEN 'Miss'  THEN 'Miss'
-    											  WHEN 'Miss.' THEN 'Miss.'
-    											  WHEN 'Mr'	   THEN 'Mr'
-    											  WHEN 'Mr.'   THEN 'Mr.'
-    											  WHEN 'Mrs'   THEN 'Mrs'
-    											  WHEN 'Mrs.'  THEN 'Mrs.'
-    											  WHEN 'Ms'	   THEN 'Ms'
-    											  WHEN 'Ms.'   THEN 'Ms.'
-    											  WHEN 'Rev'   THEN 'Rev'
-    											  WHEN 'Rev.'  THEN 'Rev.'
-    											  ELSE '' 
-    											  END
+                                                  WHEN 'Dr.'   THEN 'Dr.'
+                                                  WHEN 'Miss'  THEN 'Miss'
+                                                  WHEN 'Miss.' THEN 'Miss.'
+                                                  WHEN 'Mr'	   THEN 'Mr'
+                                                  WHEN 'Mr.'   THEN 'Mr.'
+                                                  WHEN 'Mrs'   THEN 'Mrs'
+                                                  WHEN 'Mrs.'  THEN 'Mrs.'
+                                                  WHEN 'Ms'	   THEN 'Ms'
+                                                  WHEN 'Ms.'   THEN 'Ms.'
+                                                  WHEN 'Rev'   THEN 'Rev'
+                                                  WHEN 'Rev.'  THEN 'Rev.'
+                                                  ELSE '' 
+                                                  END
     
     IF @Title = ''
     	BEGIN
