@@ -64,5 +64,8 @@
     <None Include="Scripts\lock-monitor.sql" />
     <None Include="Scripts\parse-name-parts-from-full-name.sql" />
     <None Include="Scripts\trigger-update-auditing.sql" />
+    <None Include="Scripts\update-with-join.sql" />
+    <None Include="Scripts\find-rows-with-duplicate-values.sql" />
+    <None Include="Scripts\convert-image-to-varchar.sql" />
   </ItemGroup>
 </Project>
