@@ -1,0 +1,9 @@
+﻿-- Example of how to report on identity value statistics.
+SELECT 
+    TABLE_NAME AS [Table Name],
+	IDENT_CURRENT(TABLE_NAME) AS [Current Identity], 
+	2147483647 - IDENT_CURRENT(TABLE_NAME) AS [IDs Remaining], 
+	(IDENT_CURRENT(TABLE_NAME) / (2147483647 - IDENT_CURRENT(TABLE_NAME))) * 100 AS [Percentage Used]
+FROM INFORMATION_SCHEMA.TABLES
+WHERE OBJECTPROPERTY(OBJECT_ID(TABLE_NAME), 'TableHasIdentity') = 1 AND TABLE_TYPE = 'BASE TABLE'
+ORDER BY [Current Identity] DESC

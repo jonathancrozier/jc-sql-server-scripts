@@ -17,12 +17,13 @@
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -67,5 +68,7 @@
     <None Include="Scripts\update-with-join.sql" />
     <None Include="Scripts\find-rows-with-duplicate-values.sql" />
     <None Include="Scripts\convert-image-to-varchar.sql" />
+    <None Include="Scripts\identities-used-in-database.sql" />
+    <None Include="Scripts\list-database-indexes.sql" />
   </ItemGroup>
 </Project>
