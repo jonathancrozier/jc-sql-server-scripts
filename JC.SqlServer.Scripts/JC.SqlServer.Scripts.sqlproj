@@ -70,5 +70,6 @@
     <None Include="Scripts\convert-image-to-varchar.sql" />
     <None Include="Scripts\identities-used-in-database.sql" />
     <None Include="Scripts\list-database-indexes.sql" />
+    <None Include="Scripts\list-number-of-rows-for-each-table.sql" />
   </ItemGroup>
 </Project>
