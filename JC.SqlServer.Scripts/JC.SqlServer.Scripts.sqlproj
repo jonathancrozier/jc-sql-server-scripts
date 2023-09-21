@@ -17,7 +17,7 @@
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
@@ -71,5 +71,6 @@
     <None Include="Scripts\identities-used-in-database.sql" />
     <None Include="Scripts\list-database-indexes.sql" />
     <None Include="Scripts\list-number-of-rows-for-each-table.sql" />
+	<None Include="Scripts\query-performance-statistics.sql" />
   </ItemGroup>
 </Project>
