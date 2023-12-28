@@ -5,9 +5,9 @@ SET @TableName = '%TABLE_TO_FIND%'
 
 SELECT sys.schemas.[name] AS [Schema],
        sys.tables.[name] AS [Table],
-	   sys.tables.create_date AS [Created Date],
-	   sys.tables.modify_date AS [Modified Date],
-	   sys.tables.max_column_id_used AS [Max Column ID Used]
+       sys.tables.create_date AS [Created Date],
+       sys.tables.modify_date AS [Modified Date],
+       sys.tables.max_column_id_used AS [Max Column ID Used]
 
 FROM sys.schemas
 
