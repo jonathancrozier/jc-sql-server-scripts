@@ -71,6 +71,9 @@
     <None Include="Scripts\identities-used-in-database.sql" />
     <None Include="Scripts\list-database-indexes.sql" />
     <None Include="Scripts\list-number-of-rows-for-each-table.sql" />
-	<None Include="Scripts\query-performance-statistics.sql" />
+    <None Include="Scripts\query-performance-statistics.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\find-table-names.sql" />
   </ItemGroup>
 </Project>
